@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>장도율의 첫 돌 초대장</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_NAVER_MAP_CLIENT_ID"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="images/baby.jpg" alt="장도율 사진" class="baby-photo"/>
+    
+    <h1>장도율의 첫 돌에 초대합니다</h1>
+    <p class="intro">우리 도율이가 첫 생일을 맞이했어요!</p>
+    
+    <div class="details">
+      <p><strong>일시:</strong> 2025년 9월 1일 (월)</p>
+      <p><strong>장소:</strong> 경남 진주시 신안로 168-3</p>
+    </div>
+
+    <div id="map" class="map-box"></div>
+
+    <p class="message">
+      함께 축하해주시면 큰 기쁨이 될 거예요.<br/>
+      소중한 발걸음을 기다릴게요.
+    </p>
+
+    <div class="account">
+      <p><strong>마음 전하실 곳:</strong></p>
+      <p>카카오뱅크 3333-07-9878777 허지윤</p>
+    </div>
+
+    <div class="contact">
+      <p><strong>연락처:</strong></p>
+      <p>엄마: 010-8645-2526</p>
+      <p>아빠: 010-2373-3494</p>
+    </div>
+  </div>
+
+  <script>
+    var mapOptions = {
+      center: new naver.maps.LatLng(35.180278, 128.1075),
+      zoom: 16
+    };
+
+    var map = new naver.maps.Map('map', mapOptions);
+
+    var marker = new naver.maps.Marker({
+      position: new naver.maps.LatLng(35.180278, 128.1075),
+      map: map
+    });
+  </script>
+</body>
+</html>
